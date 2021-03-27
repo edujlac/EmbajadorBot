@@ -31,11 +31,6 @@ async def community(event):
     await event.respond(f'**{phrase}**\n- __{author}__')
 
 
-@bot.on(events.NewMessage())
-async def new_message(event):
-    print(event.sender.first_name)
-
-
 @bot.on(events.ChatAction())
 async def handler(event):
     if event.user_joined:
